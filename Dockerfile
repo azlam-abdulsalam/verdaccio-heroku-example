@@ -4,6 +4,8 @@ USER root
 
 ENV NODE_ENV=production
 
+RUN npm i -g yarn
+
 RUN yarn && yarn add verdaccio-memory
 
 COPY ./config.yaml /verdaccio/conf
